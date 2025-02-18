@@ -1,5 +1,5 @@
 # RC7_UI
-User-interface for the Roblox exploit 'RC7'
+User-interface for the Roblox exploit RC7
 
 # TO DO
 - Fix sandbox escape from web browser
