@@ -22,3 +22,9 @@ jobs:
 
       - name: Build Solution
         run: msbuild RC7_UI.sln /p:Configuration=Release /p:Platform=x64
+   
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-resources
+          path: build 
