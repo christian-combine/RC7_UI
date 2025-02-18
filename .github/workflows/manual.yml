@@ -1,0 +1,24 @@
+# This is a basic workflow that is manually triggered
+name: Build Solution
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.3.1
+
+      - name: Build Solution
+        run: msbuild RC7_UI.sln /p:Configuration=Release /p:Platform=x64
